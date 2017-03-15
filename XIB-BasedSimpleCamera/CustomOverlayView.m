@@ -19,10 +19,14 @@
 */
 
 - (IBAction)shootButton:(UIButton *)sender {
+    NSLog(@"shootButton");
     _cameraLabel.text = @"Even Cooler Camera";
+    [self.delegate didShoot:self];
 }
 
 - (IBAction)cancelButton:(UIButton *)sender {
+    NSLog(@"cancelButton");
     _cameraLabel.text = @"I want to exit";
+    [self.delegate didCancel:self];
 }
 @end

@@ -21,7 +21,6 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -40,6 +39,7 @@
                                                              bundle:nil];
         CustomOverlayView *customView = (CustomOverlayView *) customViewController.view;
         customView.frame = picker.view.frame;
+        customView.delegate = self;
         
         picker.modalPresentationStyle = UIModalPresentationFullScreen;
         picker.cameraOverlayView = customView;
@@ -50,6 +50,30 @@
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
     }
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *image = (UIImage *) info[UIImagePickerControllerOriginalImage];
+    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) didShoot:(CustomOverlayView *)overlayView
+{
+    NSLog(@"didShoot");
+    [picker takePicture];
+    overlayView.cameraLabel.text = @"Shot Photo";
+}
+
+- (void) didCancel:(CustomOverlayView *)overlayView
+{
+    NSLog(@"didCancel");
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

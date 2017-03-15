@@ -10,7 +10,7 @@
 #import "CustomOverlayView.h"
 #import "CustomOverlayViewController.h"
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CustomOverlayDelegate>
 
 - (IBAction)shootPhoto:(UIButton *)sender;
 
