@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomOverlayView.h"
+#import "CustomOverlayViewController.h"
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

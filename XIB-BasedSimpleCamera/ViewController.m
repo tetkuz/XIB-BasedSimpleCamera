@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    UIImagePickerController *picker;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,14 +29,21 @@
 
 - (IBAction)shootPhoto:(UIButton *)sender {
     if ([UIImagePickerController availableCaptureModesForCameraDevice:UIImagePickerControllerCameraDeviceFront] != nil) {
-        UIImagePickerController *picker = [UIImagePickerController new];
+        picker = [UIImagePickerController new];
         picker.allowsEditing = false;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
         picker.showsCameraControls = true;
+       
+        CustomOverlayViewController *customViewController = [[CustomOverlayViewController alloc]
+                                                             initWithNibName:@"CustomOverlayViewController"
+                                                             bundle:nil];
+        CustomOverlayView *customView = (CustomOverlayView *) customViewController.view;
+        customView.frame = picker.view.frame;
         
         picker.modalPresentationStyle = UIModalPresentationFullScreen;
-        [self presentViewController:picker animated:YES completion:nil];
+        picker.cameraOverlayView = customView;
+        [self presentViewController:picker animated:YES completion:^(){ picker.cameraOverlayView = customView; }];
     } else {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Camera" message:@"Sorry, this device has no camera" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];

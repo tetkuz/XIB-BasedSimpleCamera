@@ -13,6 +13,9 @@
 		3816EE851E77F19900974203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3816EE831E77F19900974203 /* Main.storyboard */; };
 		3816EE871E77F19900974203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3816EE861E77F19900974203 /* Assets.xcassets */; };
 		3816EE8A1E77F19900974203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3816EE881E77F19900974203 /* LaunchScreen.storyboard */; };
+		3816EE961E78D7F200974203 /* CustomOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3816EE951E78D7F200974203 /* CustomOverlayView.m */; };
+		3816EE9A1E78D83800974203 /* CustomOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3816EE981E78D83800974203 /* CustomOverlayViewController.m */; };
+		3816EE9B1E78D83800974203 /* CustomOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3816EE991E78D83800974203 /* CustomOverlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		3816EE861E77F19900974203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3816EE891E77F19900974203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3816EE8B1E77F19900974203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3816EE941E78D7F200974203 /* CustomOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayView.h; sourceTree = "<group>"; };
+		3816EE951E78D7F200974203 /* CustomOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayView.m; sourceTree = "<group>"; };
+		3816EE971E78D83800974203 /* CustomOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
+		3816EE981E78D83800974203 /* CustomOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
+		3816EE991E78D83800974203 /* CustomOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,11 @@
 				3816EE881E77F19900974203 /* LaunchScreen.storyboard */,
 				3816EE8B1E77F19900974203 /* Info.plist */,
 				3816EE7A1E77F19900974203 /* Supporting Files */,
+				3816EE941E78D7F200974203 /* CustomOverlayView.h */,
+				3816EE951E78D7F200974203 /* CustomOverlayView.m */,
+				3816EE971E78D83800974203 /* CustomOverlayViewController.h */,
+				3816EE981E78D83800974203 /* CustomOverlayViewController.m */,
+				3816EE991E78D83800974203 /* CustomOverlayViewController.xib */,
 			);
 			path = "XIB-BasedSimpleCamera";
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3816EE9B1E78D83800974203 /* CustomOverlayViewController.xib in Resources */,
 				3816EE8A1E77F19900974203 /* LaunchScreen.storyboard in Resources */,
 				3816EE871E77F19900974203 /* Assets.xcassets in Resources */,
 				3816EE851E77F19900974203 /* Main.storyboard in Resources */,
@@ -151,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3816EE961E78D7F200974203 /* CustomOverlayView.m in Sources */,
 				3816EE821E77F19900974203 /* ViewController.m in Sources */,
 				3816EE7F1E77F19900974203 /* AppDelegate.m in Sources */,
 				3816EE7C1E77F19900974203 /* main.m in Sources */,
+				3816EE9A1E78D83800974203 /* CustomOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L435SSW3GH;
 				INFOPLIST_FILE = "XIB-BasedSimpleCamera/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kiroru.XIB-BasedSimpleCamera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L435SSW3GH;
 				INFOPLIST_FILE = "XIB-BasedSimpleCamera/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kiroru.XIB-BasedSimpleCamera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +330,7 @@
 				3816EE901E77F19900974203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
