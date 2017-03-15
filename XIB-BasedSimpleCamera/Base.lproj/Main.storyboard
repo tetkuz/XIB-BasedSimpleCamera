@@ -21,16 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-C4-lz1">
-                                <rect key="frame" x="313" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-C4-lz1">
+                                <rect key="frame" x="140" y="318.5" width="95" height="30"/>
+                                <state key="normal" title="Open Camera"/>
                                 <connections>
                                     <action selector="shootPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMK-hJ-4Da"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aqn-C4-lz1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8du-Ta-uSu"/>
+                            <constraint firstItem="aqn-C4-lz1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uyO-EM-WhU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
