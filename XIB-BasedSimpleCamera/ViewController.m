@@ -33,7 +33,7 @@
         picker.allowsEditing = false;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
-        picker.showsCameraControls = true;
+        picker.showsCameraControls = false;
        
         CustomOverlayViewController *customViewController = [[CustomOverlayViewController alloc]
                                                              initWithNibName:@"CustomOverlayViewController"

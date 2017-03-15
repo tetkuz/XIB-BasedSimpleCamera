@@ -18,4 +18,11 @@
 }
 */
 
+- (IBAction)shootButton:(UIButton *)sender {
+    _cameraLabel.text = @"Even Cooler Camera";
+}
+
+- (IBAction)cancelButton:(UIButton *)sender {
+    _cameraLabel.text = @"I want to exit";
+}
 @end

@@ -10,4 +10,9 @@
 
 @interface CustomOverlayView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *cameraLabel;
+
+- (IBAction)shootButton:(UIButton *)sender;
+- (IBAction)cancelButton:(UIButton *)sender;
+
 @end
